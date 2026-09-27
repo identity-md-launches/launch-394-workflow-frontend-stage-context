@@ -1,0 +1,51 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-346-donationvault4626",
+  "version": 1,
+  "launchId": "4b813316-a6c2-4717-ac06-bfbf8dfbe223",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Sepolia launch through the project factory. Deploy LaunchToken first, then DonationVault4626 with the launch token as its immutable asset. Neither constructor grants a privileged role; no initialization calls or vault funding are required. The native ETH/PIGY pool has no hook. initialPrice is decimal sqrtPriceX96; services derive the effective opening price from the pinned policy when it specifies initialMarketCapWei. The vault issues Piggy Vault (vPIGY) shares with 24 decimals and streams donate() inflows over seven days. Direct PIGY transfers count immediately; residual donations keep vesting after all shares are redeemed and can benefit subsequent depositors. Policy, signed artifact linkage, publication, admission and deployment are service responsibilities.",
+    "token": {
+      "name": "Piggy",
+      "symbol": "PIGY",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "DonationVault4626",
+        "constructorArgs": [
+          "$token"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xeb235451ecf69dadaab6882ab20219274bae1dae4acfcc3978c10f66907ae8e7",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x45f5bc74c61718d49225b54ec12a78714a7beecb",
+      "blockNumber": 11791684,
+      "creationCodeHash": "6f8d0f2a66999164ea41474cbf795d5c8442496da3d063a03cc8ba47cee42d76"
+    },
+    {
+      "name": "DonationVault4626",
+      "txHash": "0xeb235451ecf69dadaab6882ab20219274bae1dae4acfcc3978c10f66907ae8e7",
+      "abiHash": "7e1d1b0a8c450d2f3fe7f5eaf0b7204d80c2c7834642cd7f2a1aa7de17b5ed63",
+      "address": "0xbfa4a44c30f443bdc635325877a6686d7cddafc6",
+      "blockNumber": 11791684,
+      "creationCodeHash": "e8f27e572e682912cfdb7b945245c9067611af7b5b67dcfeb4a3a0ee534ff42c"
+    }
+  ],
+  "sourceCommit": "11f58db8c039c7905b501810849020511ace302f",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "b6c247c2174c81417af40e4f57a5983a65a6e48e1eb95d27e4beafee71cdf71e"
+}

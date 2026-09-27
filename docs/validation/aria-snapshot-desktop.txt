@@ -1,0 +1,112 @@
+- link "Skip to content":
+  - /url: "#main"
+- banner:
+  - paragraph: Piggy · Sepolia testnet
+  - heading "Piggy Vault" [level=1]
+  - button "Connect Test Wallet"
+- main:
+  - paragraph: An ERC-4626 vault over PIGY. Deposit PIGY for vPIGY shares, redeem shares for PIGY, or donate PIGY that unlocks to all shareholders over seven days. Reads come straight from the contract on Sepolia; nothing is stored off-chain.
+  - region "Vault":
+    - heading "Vault" [level=2]
+    - paragraph:
+      - text: Vault
+      - link "0xbfa4…afc6 (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0xbfa4a44c30f443bdc635325877a6686d7cddafc6
+      - text: · PIGY
+      - link "0x45f5…eeCb (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0x45f5bc74C61718D49225B54ec12a78714A7beeCb
+      - text: · block 11791922
+    - term: Share price
+    - definition: 1 PIGY per vPIGY
+    - term: Vested assets
+    - definition: 0 PIGY
+    - term: Total shares
+    - definition: 0 vPIGY
+    - term: Unvested donations
+    - definition: 0 PIGY nothing streaming
+    - term: Lock end
+    - definition: No donation yet
+    - term: Vault balance
+    - definition: 0 PIGY vested + unvested
+  - region "Your position":
+    - heading "Your position" [level=2]
+    - paragraph: Connect a wallet to see your PIGY balance, allowance and vPIGY shares.
+  - region "Actions":
+    - heading "Actions" [level=2]
+    - paragraph: Deposits and donations pull PIGY from your wallet, so each needs an approval to the vault first. Every transaction is simulated before your wallet opens.
+    - form "Deposit":
+      - heading "Deposit" [level=3]
+      - paragraph: Lock PIGY in the vault and receive vPIGY shares. Shares grow in value as donations vest.
+      - text: Amount to deposit
+      - textbox "Amount to deposit":
+        - /placeholder: "0.0"
+      - paragraph: Enter an amount to preview the vPIGY shares you receive.
+      - button "Approve PIGY" [disabled]
+      - button "Deposit PIGY" [disabled]
+      - paragraph: Connect a wallet to continue.
+    - form "Redeem":
+      - heading "Redeem" [level=3]
+      - paragraph: Burn vPIGY shares and receive their current PIGY value. Payout goes to the connected wallet.
+      - text: Shares to redeem
+      - textbox "Shares to redeem":
+        - /placeholder: "0.0"
+      - paragraph: Enter an amount to preview the PIGY you receive.
+      - button "Redeem vPIGY" [disabled]
+      - paragraph: Connect a wallet to continue.
+    - form "Donate":
+      - heading "Donate" [level=3]
+      - paragraph: Give PIGY to all shareholders. Donations unlock linearly over seven days; a new donation merges with the remaining stream and restarts the clock.
+      - text: Amount to donate
+      - textbox "Amount to donate":
+        - /placeholder: "0.0"
+      - paragraph: Donations reward current and future shareholders.
+      - button "Approve PIGY" [disabled]
+      - button "Donate PIGY" [disabled]
+      - paragraph: Connect a wallet to continue.
+  - region "Share price history":
+    - figure "Share price at vault actions":
+      - heading "Share price at vault actions" [level=3]
+      - paragraph: PIGY per 1 vPIGY, from every Snapshot event the vault emitted. Passive vesting between actions is not recorded; the hollow marker is the current live price. No snapshots recorded yet.
+      - paragraph:
+        - strong: No price history yet
+      - paragraph: The first deposit, redemption or donation records the first snapshot.
+  - region "Getting PIGY":
+    - heading "Getting PIGY" [level=2]
+    - paragraph: PIGY comes from swapping Sepolia ETH in the launch pool, a Uniswap v4 pool paired with native ETH (0.3% fee, tick spacing 60, no hook). This page does not swap; use a Uniswap v4 interface or a wallet swap that supports Sepolia, then return here to deposit or donate.
+    - term: PIGY token
+    - definition:
+      - link "0x45f5…eeCb (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0x45f5bc74C61718D49225B54ec12a78714A7beeCb
+    - term: Pool manager
+    - definition:
+      - link "0xe03a…3543 (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0xe03a1074c86cfedd5c142c4f04f1a1536e203543
+    - term: Universal router
+    - definition:
+      - link "0x3a9d…f98b (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b
+    - term: Quoter
+    - definition:
+      - link "0x61b3…9227 (opens the block explorer in a new tab)":
+        - /url: https://sepolia.etherscan.io/address/0x61b3f2011a92d183c7dbadbda940a7555ccf9227
+    - paragraph:
+      - text: "Need ETH for gas and swaps? Test ETH faucets:"
+      - link "cloud.google.com (opens in a new tab)":
+        - /url: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+      - text: ","
+      - link "www.alchemy.com (opens in a new tab)":
+        - /url: https://www.alchemy.com/faucets/ethereum-sepolia
+      - text: .
+  - region "How the vault behaves":
+    - heading "How the vault behaves" [level=2]
+    - list:
+      - listitem: Donations vest linearly over seven days. A new donation merges the unvested remainder and restarts the seven-day clock.
+      - listitem: PIGY sent to the vault by a plain transfer counts immediately and is not streamed. Use Donate for a streamed gift.
+      - listitem: If every share is redeemed while donations are still vesting, the remainder accrues to the next depositors.
+      - listitem: Rounding follows ERC-4626 and always favours the vault. A deposit too small to mint a share reverts.
+      - listitem: Withdrawals pay the connected wallet only. There is no owner, fee, pause or upgrade path.
+- contentinfo:
+  - paragraph:
+    - text: Chain 11155111 (Sepolia) · source commit 11f58db8c039 · launch 4b813316-a6c2-4717-ac06-bfbf8dfbe223 · configuration from
+    - code: imd-deployment.json
+  - paragraph: Static page; wallet signing stays in your wallet. Public RPC reads only.

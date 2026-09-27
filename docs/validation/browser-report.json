@@ -1,0 +1,223 @@
+{
+  "served": [
+    "/preview/",
+    "/preview/assets/index-C8V4mLcP.js",
+    "/preview/assets/index-Cw91FNsK.css",
+    "/preview/imd-deployment.json",
+    "/preview/abi/DonationVault4626.json",
+    "/preview/abi/LaunchToken.json",
+    "/preview/",
+    "/preview/assets/index-C8V4mLcP.js",
+    "/preview/assets/index-Cw91FNsK.css",
+    "/preview/imd-deployment.json",
+    "/preview/abi/DonationVault4626.json",
+    "/preview/abi/LaunchToken.json",
+    "/preview/",
+    "/preview/assets/index-C8V4mLcP.js",
+    "/preview/assets/index-Cw91FNsK.css",
+    "/preview/imd-deployment.json",
+    "/preview/abi/DonationVault4626.json",
+    "/preview/abi/LaunchToken.json",
+    "/preview/",
+    "/preview/assets/index-C8V4mLcP.js",
+    "/preview/assets/index-Cw91FNsK.css",
+    "/preview/imd-deployment.json",
+    "/preview/abi/DonationVault4626.json",
+    "/preview/abi/LaunchToken.json",
+    "/preview/",
+    "/preview/assets/index-C8V4mLcP.js",
+    "/preview/assets/index-Cw91FNsK.css",
+    "/preview/imd-deployment.json",
+    "/preview/abi/DonationVault4626.json",
+    "/preview/abi/LaunchToken.json"
+  ],
+  "console": [],
+  "failedRequests": [],
+  "pageErrors": [],
+  "checks": [
+    {
+      "name": "live vault reads rendered from public RPC",
+      "ok": true,
+      "detail": "Share price 1 PIGY per vPIGY | Vested assets 0 PIGY | Total shares 0 vPIGY | Unvested donations 0 PIGY nothing streaming | Lock end No donation yet | Vault balance 0 PIGY vested + unvested"
+    },
+    {
+      "name": "share price shows 1 PIGY per vPIGY (fresh vault)",
+      "ok": true,
+      "detail": "Share price 1 PIGY per vPIGY"
+    },
+    {
+      "name": "price history empty state explains next step",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no horizontal overflow at 1280px",
+      "ok": true,
+      "detail": "scrollWidth 1280 vs innerWidth 1280"
+    },
+    {
+      "name": "first Tab stop is the skip link",
+      "ok": true,
+      "detail": "{\"tag\":\"A\",\"name\":\"Skip to content\",\"outline\":\"solid 2px rgb(26, 86, 196)\"}"
+    },
+    {
+      "name": "focus-visible ring rendered on keyboard focus",
+      "ok": true,
+      "detail": "A:Skip to content:solid 2px rgb(26, 86, 196) ; BUTTON:Connect Test Wallet:solid 2px rgb(26, 86, 196) ; A:0xbfa4…afc6 (opens the block explorer in:solid 2px rgb(26, 86, 196) ; A:0x45f5…eeCb (opens the block explorer in:solid 2px rgb(26, 86, 196) ; INPUT::solid 2px rgb(26, 86, 196) ; INPUT::solid 2px rgb(26, 86, 196) ; INPUT::solid 2px rgb(26, 86, 196) ; A:0x45f5…eeCb (opens the block explorer in:solid 2px rgb(26, 86, 196) ; A:0xe03a…3543 (opens the block explorer in:solid 2px rgb(26, 86, 196) ; A:0x3a9d…f98b (opens the block explorer in:solid 2px rgb(26, 86, 196) ; A:0x61b3…9227 (opens the block explorer in:solid 2px rgb(26, 86, 196) ; A:cloud.google.com (opens in a new tab):solid 2px rgb(26, 86, 196) ; A:www.alchemy.com (opens in a new tab):solid 2px rgb(26, 86, 196) ; BODY:Skip to contentPiggy · Sepolia testnetPi:none 3px rgb(31, 27, 23)"
+    },
+    {
+      "name": "axe violations at 1280px disconnected",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "actions disabled on wrong chain",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "wallet_addEthereumChain offered after 4902 with network block params",
+      "ok": true,
+      "detail": "{\"chainId\":\"0xaa36a7\",\"chainName\":\"Sepolia\",\"rpcUrls\":[\"https://ethereum-sepolia-rpc.publicnode.com\",\"https://rpc.sepolia.ethpandaops.io\",\"https://sepolia.rpc.sentio.xyz\"],\"nativeCurrency\":{\"name\":\"Sepolia Ether\",\"symbol\":\"ETH\",\"decimals\":18},\"blockExplorerUrls\":[\"https://sepolia.etherscan.io\"]}"
+    },
+    {
+      "name": "switch sequence switch→add→switch",
+      "ok": true,
+      "detail": "eth_requestAccounts,eth_chainId,wallet_switchEthereumChain,wallet_addEthereumChain,wallet_switchEthereumChain,eth_chainId"
+    },
+    {
+      "name": "position reads live PIGY balance for connected account",
+      "ok": true,
+      "detail": "Your position PIGY balance 799,999,999.9999 PIGY Approved for the vault 0 PIGY Your shares 0 vPIGY Share value 0 PIGY redeemable now"
+    },
+    {
+      "name": "deposit preview from previewDeposit()",
+      "ok": true,
+      "detail": "You receive about 1 vPIGY"
+    },
+    {
+      "name": "approve step enabled when allowance is short",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deposit disabled until approved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation passed and wallet rejection shown calmly",
+      "ok": true,
+      "detail": "Approve 1 PIGY: Request cancelled in the wallet. Nothing was sent.\nDismiss"
+    },
+    {
+      "name": "no transaction broadcast",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "redeem over balance blocked inline",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "axe violations at 1280px connected",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no horizontal overflow at 320px",
+      "ok": true,
+      "detail": "scrollWidth 320 vs innerWidth 320"
+    },
+    {
+      "name": "inputs are 16px on mobile (no iOS zoom)",
+      "ok": true,
+      "detail": "16px"
+    },
+    {
+      "name": "primary control height >= 40px",
+      "ok": true,
+      "detail": "{\"x\":16,\"y\":86,\"width\":156.46875,\"height\":40}"
+    },
+    {
+      "name": "axe violations at 320px",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no horizontal overflow at 768px",
+      "ok": true,
+      "detail": "scrollWidth 768 vs innerWidth 768"
+    },
+    {
+      "name": "spinner animation disabled under prefers-reduced-motion",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "no horizontal overflow at 1280px with 200% root font size",
+      "ok": true,
+      "detail": "scrollWidth 1280 vs innerWidth 1280"
+    },
+    {
+      "name": "chart SVG measures its container at 1280px",
+      "ok": true,
+      "detail": "{\"plot\":926,\"svg\":926,\"attr\":926}"
+    },
+    {
+      "name": "chart crosshair tooltip shows price and time on hover",
+      "ok": true,
+      "detail": "0.892857 PIGY Sep 24, 2026, 03:05 PM UTC"
+    },
+    {
+      "name": "chart keyboard navigation moves the readout",
+      "ok": true,
+      "detail": "1 PIGY Sep 21, 2026, 07:45 AM UTC"
+    },
+    {
+      "name": "table view lists every snapshot",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "axe violations at 1280px chart with data",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no horizontal overflow at 320px chart with data",
+      "ok": true,
+      "detail": "scrollWidth 320 vs innerWidth 320"
+    },
+    {
+      "name": "chart SVG measures its container at 320px",
+      "ok": true,
+      "detail": "{\"plot\":254,\"svg\":254,\"attr\":254}"
+    },
+    {
+      "name": "no page errors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no console errors/warnings",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no failed resource requests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all assets loaded relative to /preview/ subpath",
+      "ok": true,
+      "detail": "/preview/ /preview/assets/index-C8V4mLcP.js /preview/assets/index-Cw91FNsK.css /preview/imd-deployment.json /preview/abi/DonationVault4626.json /preview/abi/LaunchToken.json"
+    }
+  ],
+  "axeDesktop": [],
+  "axeDesktopConnected": [],
+  "axeMobile": [],
+  "axeChart": []
+}
